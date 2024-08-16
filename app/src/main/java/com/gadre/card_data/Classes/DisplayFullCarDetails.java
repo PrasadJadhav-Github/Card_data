@@ -33,10 +33,7 @@ public class DisplayFullCarDetails implements DisplayInterface {
                    DisplayFullInfo displayFullInfo = response.body();
                     displayCarInfo.onCarDetailsReceived(displayFullInfo);
 
-                    String images =displayFullInfo.getImage();
-                    if (images!=null && images.isEmpty()){
-                        displayCarInfo.onDataReceived(images);
-                    }
+
                 } else {
                     System.out.println("Response not successful: " + response.code() + ", Message: " + response.message());
                 }

@@ -61,10 +61,7 @@ public class MainActivity extends AppCompatActivity implements DisplayCarInfo {
 
     }
 
-    @Override
-    public void onImageLoaded(String image) {
 
-    }
 
 
 }

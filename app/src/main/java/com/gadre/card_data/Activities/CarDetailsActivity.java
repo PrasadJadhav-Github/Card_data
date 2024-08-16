@@ -70,11 +70,16 @@ public class CarDetailsActivity extends AppCompatActivity implements DisplayCarI
             binding.horsepowerTextView.setText("Horsepower: " + displayFullInfoList.getHorsepower() + " HP");
             binding.ownersTextView.setText("Owners: " + displayFullInfoList.getOwners());
 
-            Glide.with(this)
-                    .load(displayFullInfoList.getImage())
-                    .placeholder(R.mipmap.ic_launcher)
-                    .into(binding.carImageView);
 
+
+            String imageUrl = displayFullInfoList.getImage();
+            if (imageUrl != null && !imageUrl.isEmpty()) {
+                Glide.with(this)
+                        .load(imageUrl)
+                        .placeholder(R.mipmap.ic_launcher) // Placeholder image
+                        .error(R.mipmap.ic_launcher) // Error image
+                        .into(binding.carImageView);
+            }
 
         }
     }
