@@ -32,8 +32,6 @@ public class DisplayFullCarDetails implements DisplayInterface {
                 if (response.isSuccessful() && response.body() != null) {
                    DisplayFullInfo displayFullInfo = response.body();
                     displayCarInfo.onCarDetailsReceived(displayFullInfo);
-
-
                 } else {
                     System.out.println("Response not successful: " + response.code() + ", Message: " + response.message());
                 }
