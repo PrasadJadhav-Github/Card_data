@@ -57,9 +57,7 @@ public class MainActivity extends AppCompatActivity implements DisplayCarInfo {
     }
 
     @Override
-    public void onCarDetailsReceived(DisplayFullInfo displayFullInfoList) {
-
-    }
+    public void onCarDetailsReceived(DisplayFullInfo displayFullInfoList) {}
 
 
 

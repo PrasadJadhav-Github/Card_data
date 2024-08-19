@@ -29,8 +29,7 @@ public class CarDetailsActivity extends AppCompatActivity implements DisplayCarI
 
     private ActivityCarDetailsBinding binding;
     private ArrayList<DisplayFullInfo> fullCarInfoList;
-    private TextView carDetailsTextView;
-    // private  int id;
+
 
 
     @Override
@@ -76,21 +75,16 @@ public class CarDetailsActivity extends AppCompatActivity implements DisplayCarI
             if (imageUrl != null && !imageUrl.isEmpty()) {
                 Glide.with(this)
                         .load(imageUrl)
-                        .placeholder(R.mipmap.ic_launcher) // Placeholder image
-                        .error(R.mipmap.ic_launcher) // Error image
+                        .placeholder(R.mipmap.ic_launcher)
+                        .error(R.mipmap.ic_launcher)
                         .into(binding.carImageView);
             }
 
         }
     }
 
-
-
-
     @Override
-    public void onDataReceived(ArrayList<CarInfo> carInfoArrayList) {
-
-    }
+    public void onDataReceived(ArrayList<CarInfo> carInfoArrayList) {}
 
 }
 

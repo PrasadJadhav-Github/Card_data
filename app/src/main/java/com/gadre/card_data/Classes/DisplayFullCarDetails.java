@@ -48,7 +48,5 @@ public class DisplayFullCarDetails implements DisplayInterface {
     }
 
     @Override
-    public void DisplayCarsInfo() {
-
-    }
+    public void DisplayCarsInfo() {}
 }
